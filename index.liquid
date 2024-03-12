@@ -3,5 +3,22 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<div x-data="{ weather: 'uncertain at this stage' }">
+
+    The weather is <span x-text="weather"></span>
+
+    <button
+        x-on:click="weather = await $fetchjson('https://expensive-crow-sarong.cyclic.cloud/some_json', jsonItem='weather')"
+    >Click me to change the weather</button>
+
+</div>
+
+<div x-data="{ weather: 'uncertain at this stage' }">
+
+    The weather is <span x-text="weather"></span>
+
+    <button
+        x-on:click="weather = await $fetchjson('https://expensive-crow-sarong.cyclic.cloud/some_json', jsonItem='weather')"
+    >Click me to change the weather</button>
+
+</div>
